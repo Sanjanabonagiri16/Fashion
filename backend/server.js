@@ -22,7 +22,7 @@ app.use('/api/nearby', nearbyRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/users', userRoutes);
 
-mongoose.connect('your_mongo_db_connection_string', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('yomongodb://localhost:27017/', { useNewUrlParser: true, useUnifiedTopology: true });
 
 io.on('connection', (socket) => {
     console.log('New client connected');
